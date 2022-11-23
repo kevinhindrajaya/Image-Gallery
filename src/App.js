@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Gallery from './components/Gallery';
+import Navbar from './components/Navbar';
+import Java from '../src/assets/javascript.png'
+import Node from '../src/assets/node.png'
+import Python from '../src/assets/python.png'
+import reactImg from '../src/assets/react.png'
 
 function App() {
+  const galleryImage = {
+    img:Java,
+    img:Node,
+    img:Python,
+    img:reactImg
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Gallery 
+        galleryImage = {galleryImage}
+      />
     </div>
   );
 }
